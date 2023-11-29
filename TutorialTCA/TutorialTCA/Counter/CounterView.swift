@@ -9,7 +9,7 @@ import ComposableArchitecture
 
 import SwiftUI
 
-struct ContentView: View {
+struct CounterView: View {
     let store: StoreOf<CounterFeature>
     
     var body: some View {
@@ -69,7 +69,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(
+        CounterView(
             store: Store(
                 initialState: CounterFeature.State(),
                 reducer: {

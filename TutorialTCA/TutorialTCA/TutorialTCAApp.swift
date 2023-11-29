@@ -12,17 +12,26 @@ import SwiftUI
 @main
 struct TutorialTCAApp: App {
     
+//    static let store = Store(
+//        initialState: CounterFeature.State(),
+//        reducer: {
+//            CounterFeature()
+//                ._printChanges()
+//        }
+//    )
+    
     static let store = Store(
-        initialState: CounterFeature.State(),
+        initialState: ContactsFeature.State(),
         reducer: {
-            CounterFeature()
+            ContactsFeature()
                 ._printChanges()
         }
     )
     
     var body: some Scene {
         WindowGroup {
-            ContentView(store: Self.store)
+//            CounterView(store: Self.store)
+            ContactsView(store: Self.store)
         }
     }
 }

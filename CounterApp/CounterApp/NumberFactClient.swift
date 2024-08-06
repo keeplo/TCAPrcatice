@@ -1,22 +1,21 @@
 //
 //  NumberFactClient.swift
-//  TutorialTCA
+//  CounterApp
 //
-//  Created by 김용우 on 2023/11/28.
+//  Created by 김용우 on 8/6/24.
 //
 
-import Foundation
 import ComposableArchitecture
+import Foundation
 
 struct NumberFactClient {
     var fetch: (Int) async throws -> String
 }
 
 extension NumberFactClient: DependencyKey {
-    static let liveValue = NumberFactClient(
+    static let liveValue = Self(
         fetch: { number in
-            let (data, _) = try await URLSession.shared
-                .data(from: URL(string: "http://numbersapi.com/\(number)")!)
+            let (data, _) = try await URLSession.shared.data(from: .init(string: "http://numbersapi.com/\(number)")!)
             return String(decoding: data, as: UTF8.self)
         }
     )

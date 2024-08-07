@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A9D61C062C62F51C000A6BC8 /* ContactAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C052C62F51C000A6BC8 /* ContactAppApp.swift */; };
-		A9D61C082C62F51C000A6BC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C072C62F51C000A6BC8 /* ContentView.swift */; };
 		A9D61C0A2C62F51E000A6BC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D61C092C62F51E000A6BC8 /* Assets.xcassets */; };
 		A9D61C0D2C62F51E000A6BC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D61C0C2C62F51E000A6BC8 /* Preview Assets.xcassets */; };
 		A9D61C172C62F51E000A6BC8 /* ContactsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C162C62F51E000A6BC8 /* ContactsFeatureTests.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		A9D61C022C62F51C000A6BC8 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D61C052C62F51C000A6BC8 /* ContactAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAppApp.swift; sourceTree = "<group>"; };
-		A9D61C072C62F51C000A6BC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A9D61C092C62F51E000A6BC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9D61C0C2C62F51E000A6BC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9D61C122C62F51E000A6BC8 /* ContactAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,11 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A9D61C332C62F57A000A6BC8 /* App */,
-				A9D61C072C62F51C000A6BC8 /* ContentView.swift */,
-				A9D61C422C6329A9000A6BC8 /* Alert */,
-				A9D61C3B2C630762000A6BC8 /* Entity */,
-				A9D61C322C62F56A000A6BC8 /* ContactView */,
-				A9D61C382C630735000A6BC8 /* AddContactView */,
+				A9D61C452C632BE6000A6BC8 /* Presentation */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -171,6 +165,25 @@
 				A9D61C432C6329BB000A6BC8 /* AlertState+.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		A9D61C452C632BE6000A6BC8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A9D61C422C6329A9000A6BC8 /* Alert */,
+				A9D61C3B2C630762000A6BC8 /* Entity */,
+				A9D61C462C632C0B000A6BC8 /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A9D61C462C632C0B000A6BC8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A9D61C322C62F56A000A6BC8 /* ContactView */,
+				A9D61C382C630735000A6BC8 /* AddContactView */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +294,6 @@
 			files = (
 				A9D61C442C6329BB000A6BC8 /* AlertState+.swift in Sources */,
 				A9D61C372C62F61C000A6BC8 /* ContactsFeature.swift in Sources */,
-				A9D61C082C62F51C000A6BC8 /* ContentView.swift in Sources */,
 				A9D61C3F2C6307B1000A6BC8 /* AddContactView.swift in Sources */,
 				A9D61C3D2C630773000A6BC8 /* Contact.swift in Sources */,
 				A9D61C062C62F51C000A6BC8 /* ContactAppApp.swift in Sources */,

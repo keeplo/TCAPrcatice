@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
 
 @main
 struct ContactAppApp: App {
-    static let store: StoreOf<ContactsFeature> = .init(initialState: ContactsFeature.State()) {
-        ContactsFeature()
-    }
-    
     var body: some Scene {
         WindowGroup {
-            ContentView(store: Self.store)
+            ContactsView(
+                store: .init(
+                    initialState: ContactsFeature.State()
+                ) {
+                    ContactsFeature()
+                }
+            )
         }
     }
 }

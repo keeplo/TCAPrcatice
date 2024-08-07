@@ -24,3 +24,18 @@ extension AlertState where Action == ContactsFeature.Action.Alert {
     }
     
 }
+
+extension AlertState where Action == ContactDetailFeature.Action.Alert {
+    
+    static let confirmDeletion = Self(
+        title: { TextState("Are you sure?") },
+        actions: {
+            ButtonState(
+                role: .destructive,
+                action: .confirmDeletion,
+                label: { TextState("Delete") }
+            )
+        }
+    )
+    
+}

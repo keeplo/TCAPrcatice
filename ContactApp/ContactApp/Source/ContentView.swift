@@ -6,19 +6,43 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 struct ContentView: View {
+    let store: StoreOf<ContactsFeature>
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(store.contacts) { contact in
+                    Text(contact.name)
+                }
+            }
+            .navigationTitle("Contacts")
+            .toolbar {
+                ToolbarItem {
+                    Button(
+                        action: { store.send(.addButtonTapped) },
+                        label: { Image(systemName: "plus") }
+                    )
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(
+        store: .init(
+            initialState: ContactsFeature.State(
+                contacts: [
+                    Contact(id: .init(), name: "Blob"),
+                    Contact(id: .init(), name: "Blob Jr"),
+                    Contact(id: .init(), name: "Blob Sr")
+                ]
+            )
+        ) {
+            ContactsFeature()
+        }
+    )
 }

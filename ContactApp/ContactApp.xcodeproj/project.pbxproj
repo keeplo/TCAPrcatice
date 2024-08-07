@@ -13,6 +13,11 @@
 		A9D61C0D2C62F51E000A6BC8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9D61C0C2C62F51E000A6BC8 /* Preview Assets.xcassets */; };
 		A9D61C172C62F51E000A6BC8 /* ContactAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C162C62F51E000A6BC8 /* ContactAppTests.swift */; };
 		A9D61C312C62F55B000A6BC8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = A9D61C302C62F55B000A6BC8 /* ComposableArchitecture */; };
+		A9D61C372C62F61C000A6BC8 /* ContactsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C362C62F61C000A6BC8 /* ContactsFeature.swift */; };
+		A9D61C3A2C63074B000A6BC8 /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C392C63074B000A6BC8 /* AddContactFeature.swift */; };
+		A9D61C3D2C630773000A6BC8 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C3C2C630773000A6BC8 /* Contact.swift */; };
+		A9D61C3F2C6307B1000A6BC8 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C3E2C6307B1000A6BC8 /* AddContactView.swift */; };
+		A9D61C412C630A30000A6BC8 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D61C402C630A30000A6BC8 /* ContactsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,11 @@
 		A9D61C0C2C62F51E000A6BC8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A9D61C122C62F51E000A6BC8 /* ContactAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9D61C162C62F51E000A6BC8 /* ContactAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAppTests.swift; sourceTree = "<group>"; };
+		A9D61C362C62F61C000A6BC8 /* ContactsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsFeature.swift; sourceTree = "<group>"; };
+		A9D61C392C63074B000A6BC8 /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
+		A9D61C3C2C630773000A6BC8 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		A9D61C3E2C6307B1000A6BC8 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		A9D61C402C630A30000A6BC8 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,8 @@
 		A9D61C322C62F56A000A6BC8 /* ContactView */ = {
 			isa = PBXGroup;
 			children = (
+				A9D61C402C630A30000A6BC8 /* ContactsView.swift */,
+				A9D61C362C62F61C000A6BC8 /* ContactsFeature.swift */,
 			);
 			path = ContactView;
 			sourceTree = "<group>";
@@ -126,9 +138,28 @@
 			children = (
 				A9D61C332C62F57A000A6BC8 /* App */,
 				A9D61C072C62F51C000A6BC8 /* ContentView.swift */,
+				A9D61C3B2C630762000A6BC8 /* Entity */,
 				A9D61C322C62F56A000A6BC8 /* ContactView */,
+				A9D61C382C630735000A6BC8 /* AddContactView */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		A9D61C382C630735000A6BC8 /* AddContactView */ = {
+			isa = PBXGroup;
+			children = (
+				A9D61C3E2C6307B1000A6BC8 /* AddContactView.swift */,
+				A9D61C392C63074B000A6BC8 /* AddContactFeature.swift */,
+			);
+			path = AddContactView;
+			sourceTree = "<group>";
+		};
+		A9D61C3B2C630762000A6BC8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A9D61C3C2C630773000A6BC8 /* Contact.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D61C372C62F61C000A6BC8 /* ContactsFeature.swift in Sources */,
 				A9D61C082C62F51C000A6BC8 /* ContentView.swift in Sources */,
+				A9D61C3F2C6307B1000A6BC8 /* AddContactView.swift in Sources */,
+				A9D61C3D2C630773000A6BC8 /* Contact.swift in Sources */,
 				A9D61C062C62F51C000A6BC8 /* ContactAppApp.swift in Sources */,
+				A9D61C3A2C63074B000A6BC8 /* AddContactFeature.swift in Sources */,
+				A9D61C412C630A30000A6BC8 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ContactApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContactApp/Resource/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -415,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ContactApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ContactApp/Resource/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -512,7 +548,7 @@
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
 				kind = upToNextMinorVersion;
-				minimumVersion = 1.11.0;
+				minimumVersion = 1.12.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
